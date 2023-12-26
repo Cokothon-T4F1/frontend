@@ -1,8 +1,8 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
 import styled from "styled-components";
-import Footer from "../../Components/Footer";
-import Header from "../../Components/Header";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 import * as S from "./MainPage.style";
 
 function MainPage() {
