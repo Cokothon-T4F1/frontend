@@ -1,18 +1,15 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
+  background: #5220c7;
 `;
 
 export const LoginTitle = styled.div`
-width: 100%;
 color: black;
-font-weight: 800;
-margin-top: 100px;
+font-weight: 1000;
 font-size: xx-large;
 }
 `;
@@ -20,15 +17,15 @@ font-size: xx-large;
 export const LoginBox = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 100px 200px;
-  height: 400px;
-  background: #d9d9d9;
-  border-radius: 10px;
+  margin: 200px 100px;
+  height: 1000px;
+  background: #ffffff;
+  border-radius: 20px;
 `;
 
 export const IsLogin = styled.div`
-  font-weight: 800;
-  margin-top: 20px;
+  font-weight: 1000;
+  margin-top: 50px;
   margin-bottom: 20px;
   font-size: xx-large;
 `;
@@ -43,7 +40,8 @@ export const FormEmail = styled.input`
   width: 400px;
   height: 60px;
   border: 1px solid black;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  border-radius: 6px;
 `;
 
 export const FormPw = styled.input`
@@ -51,28 +49,38 @@ export const FormPw = styled.input`
   height: 60px;
   border: 1px solid black;
   margin: 0 auto;
+  border-radius: 6px;
 `;
 
 export const Options = styled.div`
-  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   text-align: center;
 `;
 
 export const IsOption = styled.div`
-  width: 200px;
-  height: 30px;
-  background: #ffbdbd;
-  border-radius: 8px;
-  margin-top: 20px;
+  font-weight: 1000;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  font-size: xx-large;
+  letter-spacing: 0;
 `;
+
 export const LoginBtn = styled.div`
-  width: 100px;
-  height: 30px;
+  width: 400px;
+  height: 60px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 100px;
   border-radius: 6px;
   background: #6a4f77;
   color: white;
+  padding-top: 20px;
+`;
+
+export const TitleImg = styled.img`
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
 `;

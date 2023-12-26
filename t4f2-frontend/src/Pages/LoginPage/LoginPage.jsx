@@ -11,8 +11,10 @@ function LoginPage() {
 
   return (
     <S.Container>
-      <S.LoginTitle>로그인해서 이야기를 들려주세요!</S.LoginTitle>
       <S.LoginBox>
+        <S.TitleImg src="/images/lock.png" alt="img5"></S.TitleImg>
+
+        <S.IsLogin>로그인해서 본인의 이야기를 들려주세요</S.IsLogin>
         <S.IsLogin>Login</S.IsLogin>
 
         <S.Forms>
