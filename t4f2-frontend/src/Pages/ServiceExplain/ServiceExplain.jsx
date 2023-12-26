@@ -1,11 +1,17 @@
 import React from "react";
-import * as S from "./Login.style";
+import { useNavigate } from "react-router-dom";
+import * as S from "./ServiceExplain.style";
 import Fade from "react-reveal/Fade";
 
-function Login() {
+function ServiceExplain() {
+  const navigate = useNavigate();
+  const PageMoveHandler = () => {
+    navigate("/login");
+  };
+
   return (
     <S.Container>
-      <S.Login>Sign In</S.Login>
+      <S.Login onClick={PageMoveHandler}>Sign In</S.Login>
 
       <S.MainTitle>
         <S.ServiceTitle>Waggle!</S.ServiceTitle>
@@ -50,4 +56,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default ServiceExplain;
