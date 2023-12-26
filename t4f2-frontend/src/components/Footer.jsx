@@ -1,14 +1,12 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Footer = ({ onClick }) => {
-    return (
-      <Container onClick={onClick} />
-    );
-  };
+  return <Container onClick={onClick} />;
+};
 
 const Container = styled.div`
-  height: 64px;
-  background: linear-gradient(to right, #A4308B, #16B0C5);
+  height: 20px;
+  background: linear-gradient(to right, #a4308b, #16b0c5);
   cursor: pointer;
   margin-bottom: 0px;
   margin-top: auto;
