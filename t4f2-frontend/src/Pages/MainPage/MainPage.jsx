@@ -1,8 +1,8 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
 import styled from "styled-components";
-import Footer from "../../Components/Footer";
-import Header from "../../Components/Header";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 import * as S from "./MainPage.style";
 
 function MainPage() {
@@ -32,7 +32,7 @@ function MainPage() {
         </Fade>
         <Fade bottom delay={1000}>
           <S.List>
-            <S.PlayImg src="/images/today3.png" alt="im5"></S.PlayImg>
+            <S.PlayImg src="/images/today3.png" alt="img5"></S.PlayImg>
             <S.PlayBar></S.PlayBar>
             <S.PlayBarImg src="/images/playbar.png" alt="img6"></S.PlayBarImg>
             <S.PlayExplain>친구가 이성으로 보이는 순간</S.PlayExplain>
