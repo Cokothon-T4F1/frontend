@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "MaruBuriExtraLight";
+  src: url("./MaruBuri-ExtraLight_1.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MaruBuriLight";
+  src: url("./MaruBuri-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MaruBuriExtraLight";
+  src: url("./MaruBuri-ExtraLight_1.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MaruBuri";
+  src: url("./MaruBuri-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MaruBuriBold";
+  src: url("MaruBuri-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MaruBuriSemiBold";
+  src: url("./MaruBuri-SemiBold.woff") format("woff");
+}
