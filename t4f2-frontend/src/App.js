@@ -4,25 +4,28 @@ import ServiceExplain from "./Pages/ServiceExplain/ServiceExplain";
 import LoginPage from "./Pages/LoginPage/LoginPage";
 import GlobalStyle from "./GlobalStyles";
 import MainPage from "./Pages/MainPage/MainPage";
-import SearchPage from "./Pages/SearchPage/SearchPage";
-import ResultPage from "./Pages/ResultPage/ResultPage";
+
+import MainPostPage from "./Pages/Main/MainPostPage";
+import IanSinu from "./Pages/Ian/Ian";
 import MainSearch from "./Pages/MainSearch/MainSearch";
+
 
 function App() {
   return (
-    <div>
+    <>
       <GlobalStyle />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<ServiceExplain />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/main" element={<MainPage />} />
-          <Route path="/search" element={<SearchPage />} />
-          <Route path="/result" element={<ResultPage />} />
-          <Route path="/mainsearch" element={<MainSearch />} />
+          <Route path="/mainpost" element={<MainPostPage />} />
+          <Route path="/ian" element={<IanSinu />} />
+             <Route path="/mainsearch" element={<MainSearch />} />
+
         </Routes>
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 
