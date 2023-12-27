@@ -17,16 +17,17 @@ font-size: xx-large;
 export const LoginBox = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 200px 100px;
-  height: 1000px;
+  margin: 100px;
+  width: 700px;
   background: #ffffff;
   border-radius: 20px;
+  margin-left: 400px;
 `;
 
 export const IsLogin = styled.div`
   font-weight: 1000;
-  margin-top: 50px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-size: xx-large;
 `;
 
@@ -60,21 +61,21 @@ export const Options = styled.div`
 
 export const IsOption = styled.div`
   font-weight: 1000;
-  margin-top: 100px;
-  margin-bottom: 20px;
+  margin-top: 20px;
   font-size: xx-large;
   letter-spacing: 0;
 `;
 
 export const LoginBtn = styled.div`
-  width: 400px;
-  height: 60px;
+  width: 140px;
+  height: 40px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 10px;
   border-radius: 6px;
   background: #6a4f77;
   color: white;
   padding-top: 20px;
+  margin-bottom: 10px;
 `;
 
 export const TitleImg = styled.img`

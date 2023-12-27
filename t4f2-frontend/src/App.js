@@ -6,6 +6,7 @@ import GlobalStyle from "./GlobalStyles";
 import MainPage from "./Pages/MainPage/MainPage";
 import SearchPage from "./Pages/SearchPage/SearchPage";
 import ResultPage from "./Pages/ResultPage/ResultPage";
+import MainSearch from "./Pages/MainSearch/MainSearch";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/main" element={<MainPage />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/result" element={<ResultPage />} />
+          <Route path="/mainsearch" element={<MainSearch />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 import styled from "styled-components";
 import Footer from "../../components/Footer";
@@ -6,6 +7,11 @@ import Header from "../../components/Header";
 import * as S from "./MainPage.style";
 
 function MainPage() {
+  const navigate = useNavigate();
+
+  const NextHandler = () => {
+    navigate("/mainpost");
+  };
   return (
     <Container>
       <Header />
@@ -14,7 +20,11 @@ function MainPage() {
       <S.TodayList>
         <Fade bottom delay={500}>
           <S.List>
-            <S.PlayImg src="/images/today1.png" alt="img1"></S.PlayImg>
+            <S.PlayImg
+              onClick={NextHandler}
+              src="/images/today1.png"
+              alt="img1"
+            ></S.PlayImg>
             <S.PlayBar></S.PlayBar>
             <S.PlayBarImg src="/images/playbar.png" alt="img2"></S.PlayBarImg>
             <S.PlayExplain>살면서 겪은 역대급 흑역사 일화</S.PlayExplain>
@@ -22,7 +32,11 @@ function MainPage() {
         </Fade>
         <Fade bottom delay={0}>
           <S.List style={{ marginTop: "30px" }}>
-            <S.PlayImg src="/images/today2.png" alt="img3"></S.PlayImg>
+            <S.PlayImg
+              onClick={NextHandler}
+              src="/images/today2.png"
+              alt="img3"
+            ></S.PlayImg>
             <S.PlayBar></S.PlayBar>
             <S.PlayBarImg src="/images/playbar.png" alt="img4"></S.PlayBarImg>
             <S.PlayExplain>
@@ -32,7 +46,11 @@ function MainPage() {
         </Fade>
         <Fade bottom delay={1000}>
           <S.List>
-            <S.PlayImg src="/images/today3.png" alt="im5"></S.PlayImg>
+            <S.PlayImg
+              onClick={NextHandler}
+              src="/images/today3.png"
+              alt="im5"
+            ></S.PlayImg>
             <S.PlayBar></S.PlayBar>
             <S.PlayBarImg src="/images/playbar.png" alt="img6"></S.PlayBarImg>
             <S.PlayExplain>친구가 이성으로 보이는 순간</S.PlayExplain>

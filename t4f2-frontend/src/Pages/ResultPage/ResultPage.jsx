@@ -5,7 +5,9 @@ import * as S from "./ResultPage.style";
 
 function ResultPage() {
   const [isModalOpen, setModalOpen] = useState(false);
-  const [absenceReason, setAbsenceReason] = useState("");
+  const [word, setAbsenceReason] = useState("");
+  const [songname, setSongName] = useState([]);
+  const [selectedSong, setSelectedSong] = useState(null);
 
   const handleReasonChange = (event) => {
     setAbsenceReason(event.target.value);
@@ -19,32 +21,32 @@ function ResultPage() {
     setModalOpen(true);
   };
 
-  const handleSendReason = () => {
-    axios
-      .get(
-        "https://cors-anywhere.herokuapp.com/https://8bf9-1-209-175-115.ngrok-free.app/music/search",
+  const handleSendReason = async () => {
+    try {
+      const result = await axios.get(
+        "https://cors-anywhere.herokuapp.com/https://0d95-1-209-175-115.ngrok-free.app/music/search",
         {
           params: {
-            word: absenceReason,
+            word: word,
             type: "track",
           },
+          headers: {
+            "Content-Type": "application/json",
+            "ngrok-skip-browser-warning": "69420",
+          },
         }
-      )
-      .then((response) => {
-        console.log(response.data);
-        alert("곡 탐색 완료!");
-        handleCloseModal();
-      })
-      .catch((error) => {
-        // Handle errors
-        console.error("Error sending GET request:", error);
-      });
+      );
+      const songs = result.data;
+      console.log(songs);
+      setSongName(songs);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   };
 
   return (
     <S.LeftContain>
       <S.Single>
-        {/* 넣기 */}
         <S.SingleInfo>
           <S.SinImg src="/images/unable.png" alt="SearchImg"></S.SinImg>
           <S.Texting>
@@ -53,17 +55,17 @@ function ResultPage() {
             <S.Emotions>
               <S.ImoList>
                 <S.EmoImg src="/images/happy.png" alt="SearchImg"></S.EmoImg>
-                <S.EmoSee>조회</S.EmoSee>
+                <S.EmoSee onClick={MusicHandle}>조회</S.EmoSee>
               </S.ImoList>
 
               <S.ImoList>
                 <S.EmoImg src="/images/cheer.png" alt="SearchImg"></S.EmoImg>
-                <S.EmoSee>조회</S.EmoSee>
+                <S.EmoSee onClick={MusicHandle}>조회</S.EmoSee>
               </S.ImoList>
 
               <S.ImoList>
                 <S.EmoImg src="/images/funny.png" alt="SearchImg"></S.EmoImg>
-                <S.EmoSee>조회</S.EmoSee>
+                <S.EmoSee onClick={MusicHandle}>조회</S.EmoSee>
               </S.ImoList>
 
               <S.ImoList>
@@ -74,6 +76,7 @@ function ResultPage() {
           </S.Texting>
         </S.SingleInfo>
       </S.Single>
+
       {isModalOpen && (
         <S.ModalOverlay>
           <S.ModalContent>
@@ -82,12 +85,19 @@ function ResultPage() {
 
             <S.ReasonCont>
               <S.TextBox
-                value={absenceReason}
+                value={word}
                 onChange={handleReasonChange}
                 placeholder="사유를 입력하세요"
               />
               <S.SendButton onClick={handleSendReason}>전송하기</S.SendButton>
             </S.ReasonCont>
+            {songname && Array.isArray(songname) && (
+              <S.SongListContainer>
+                {songname.map((song, index) => (
+                  <S.SongItem key={index}>{song.name}</S.SongItem>
+                ))}
+              </S.SongListContainer>
+            )}
           </S.ModalContent>
         </S.ModalOverlay>
       )}

@@ -112,3 +112,13 @@ export const SendButton = styled.div`
   background: #2b80ff33;
   font-weight: 700;
 `;
+
+export const SongListContainer = styled.div`
+  margin-top: 10px;
+`;
+
+export const SongItem = styled.div`
+  margin-bottom: 5px;
+  cursor: pointer;
+  /* Add more styles as needed */
+`;
