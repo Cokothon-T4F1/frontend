@@ -1,24 +1,23 @@
 import styled from "styled-components";
 
 export const LeftContain = styled.div`
-  height: 100vh;
+  height: 50vh;
+  overflow-y: auto;
   background-color: white;
 `;
 
 export const SingleInfo = styled.div`
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
 `;
 
 export const Single = styled.div`
   width: 100%;
-  height: 100vh;
   background-color: white;
   display: flex;
   flex-direction: row;
-  gap:10px;
+  gap: 10px;
 `;
 
 export const SinImg = styled.img`

@@ -9,7 +9,7 @@ import IanSinu from "./Pages/Ian/Ian";
 
 function App() {
   return (
-    <div>
+    <>
       <GlobalStyle />
       <BrowserRouter>
         <Routes>
@@ -20,7 +20,7 @@ function App() {
           <Route path="/ian" element={<IanSinu />} />
         </Routes>
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 

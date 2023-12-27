@@ -16,52 +16,70 @@ function MainPostPage({ placeholder }) {
     setText(e.target.value);
   };
 
-  return (    
-    <Container>
-        <Header />
-        <Box>
-          <VerticBox>
-            <Title>Today's Post</Title>
-            <Text>Click to share & post!</Text>
-            <S.List>
-              <S.PlayImg src="/images/today3.png" alt="img5"></S.PlayImg>
-              <S.PlayBar></S.PlayBar>
-              <S.PlayBarImg src="/images/playbar.png" alt="img6"></S.PlayBarImg>
-              <S.PlayExplain>친구가 이성으로 보이는 순간</S.PlayExplain>
-            </S.List>
-          </VerticBox>
-          <VerticBox> 
-            {/* <NickName>@IanSinu</NickName> */}
-            <Box_>
-              <User />
-              <SearchBar onChange={onChange} value={text} placeholder={hintText} />
-              <SearchImg src="/images/search.png" alt="search" />
-            </Box_>
-            <CommentBox>
-              <Ian/>
-            </CommentBox>
-          </VerticBox>
-        </Box>
-        <Footer />
+  return (
+    <Container
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        height: "100vh",
+      }}
+    >
+      <Header />
+      <Box
+        style={{
+          display: "flex",
+          flex: 1,
+          justifyContent: "center",
+          marginLeft: "5rem",
+          marginRight: "5rem",
+        }}
+      >
+        <VerticBox>
+          <Title>Today's Post</Title>
+          <Text>Click to share & post!</Text>
+          <S.List>
+            <S.PlayImg src="/images/today3.png" alt="img5"></S.PlayImg>
+            <S.PlayBar></S.PlayBar>
+            <S.PlayBarImg src="/images/playbar.png" alt="img6"></S.PlayBarImg>
+            <S.PlayExplain>친구가 이성으로 보이는 순간</S.PlayExplain>
+          </S.List>
+        </VerticBox>
+        <VerticBox>
+          {/* <NickName>@IanSinu</NickName> */}
+          <Box_>
+            <User />
+            <SearchBar
+              onChange={onChange}
+              value={text}
+              placeholder={hintText}
+            />
+            <SearchImg src="/images/search.png" alt="search" />
+          </Box_>
+          <CommentBox>
+            <Ian />
+          </CommentBox>
+        </VerticBox>
+      </Box>
     </Container>
   );
-};
+}
 
 const Container = styled.div`
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  height: 100%;
+  width: 100%;
 `;
 
 const VerticBox = styled.div`
-  display: flex;
+  diplay: flex;
   flex-direction: column;
+  justifycontent: center;
+  padding: 2rem;
 `;
 
 const SearchBar = styled.input`
   width: 550px;
   height: 25px;
-  background: linear-gradient(to right, #A4308B, #16B0C5);
+  background: linear-gradient(to right, #a4308b, #16b0c5);
   border-radius: 10px;
   margin-top: 60px;
 `;
@@ -71,7 +89,7 @@ const Box = styled.div`
   margin-right: 10%;
   display: flex;
   flex-direction: row;
-  gap:350px;
+  gap: 350px;
 `;
 
 const Box_ = styled.div`
@@ -83,10 +101,7 @@ const Box_ = styled.div`
 
 const CommentBox = styled.div`
   margin-top: 30px;
-  width: 700px;
-  height: 400px;
   border: 2px solid #909090;
-
 `;
 
 const Title = styled.div`
@@ -112,7 +127,7 @@ const NickName = styled.div`
 `;
 
 const SearchImg = styled.img`
-  width:30px;
+  width: 30px;
   height: 30px;
   cursor: pointer;
 `;
