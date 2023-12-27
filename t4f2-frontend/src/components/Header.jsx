@@ -34,7 +34,7 @@ const Header = ({ placeholder }) => {
         </Category>
         <Category>
           <Menu onClick={SearchHandler}>Monthly Topics</Menu>
-          <Menu>Setting</Menu>
+          <Menu onClick={SearchHandler}>Search</Menu>
           <Menu>Account</Menu>
           <Menu>About</Menu>
         </Category>

@@ -1,3 +1,4 @@
+// ServiceExplain.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import * as S from "./ServiceExplain.style";
@@ -96,37 +97,97 @@ function ServiceExplain() {
 
       <Fade bottom delay={8500}>
         <S.Fourth>
-          <S.FirstOne>
+          <S.Section alt="firstone">
             <S.FirstImg src="/images/melon.png" alt="im6"></S.FirstImg>
-
-            <S.ActionContainer>
+            <S.ActionContainer alt="ActionConainer">
               <S.Action1Title>
                 '슬퍼요'에 공감한 <br /> 친구들이 만들어준 PlayList 에요!
               </S.Action1Title>
-              <S.ActionMain src="/images/sad_pl.png" alt="im6"></S.ActionMain>
+              <S.Carousel>
+                <S.LI>
+                  <S.Image src="/images/sadlist/album1.png" />
+                </S.LI>
+                <S.LI>
+                  <S.Image src="/images/sadlist/album2.png" />
+                </S.LI>
+                <S.LI>
+                  <S.Image src="/images/sadlist/album3.png" />
+                </S.LI>
+                <S.LI>
+                  <S.Image src="/images/sadlist/album4.png" />
+                </S.LI>
+                <S.LI>
+                  <S.Image src="/images/sadlist/album5.png" />
+                </S.LI>
+                <S.LI>
+                  <S.Image src="/images/sadlist/album6.png" />
+                </S.LI>
+                <S.LI>
+                  <S.Image src="/images/sadlist/album7.png" />
+                </S.LI>
+                <S.LI>
+                  <S.Image src="/images/sadlist/album8.png" />
+                </S.LI>
+              </S.Carousel>
             </S.ActionContainer>
-          </S.FirstOne>
+          </S.Section>
 
-          <S.SecondOne>
+          <S.SecondOne alt="secondone">
             직접 추천한 노래들이 모여 <br /> Topic 에 맞는 PlayList 가 돼요!
           </S.SecondOne>
-          <S.ThirdOne>
-            <S.ActionC2>
+
+          <S.Section alt="thirdone">
+            <S.ActionContainer alt="HappyList">
               <S.Action2Title>
-                '멋저요'에 공감한 <br /> 친구들이 만들어준 PlayList 에요!
+                '기뻐요'에 공감한 <br /> 친구들이 만들어준 PlayList 에요!
               </S.Action2Title>
-              <S.Action2Main
-                src="/images/happy_pli.png"
-                alt="im6"
-              ></S.Action2Main>
-            </S.ActionC2>
+              <S.Carousel>
+                <S.LI>
+                  <S.Image src="/images/happylist/album1.png" />
+                </S.LI>
+                <S.LI>
+                  <S.Image src="/images/happylist/album2.png" />
+                </S.LI>
+                <S.LI>
+                  <S.Image src="/images/happylist/album3.png" />
+                </S.LI>
+                <S.LI>
+                  <S.Image src="/images/happylist/album4.png" />
+                </S.LI>
+                <S.LI>
+                  <S.Image src="/images/happylist/album5.png" />
+                </S.LI>
+                <S.LI>
+                  <S.Image src="/images/happylist/album6.png" />
+                </S.LI>
+                <S.LI>
+                  <S.Image src="/images/happylist/album7.png" />
+                </S.LI>
+                <S.LI>
+                  <S.Image src="/images/happylist/album8.png" />
+                </S.LI>
+              </S.Carousel>
+            </S.ActionContainer>
 
             <S.PlayListImg src="/images/playlist.png" alt="im6"></S.PlayListImg>
-          </S.ThirdOne>
+          </S.Section>
         </S.Fourth>
       </Fade>
-
-      <S.NextBtn onClick={NextChangeHandler}> 작성하러 가기 </S.NextBtn>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <S.WriteImg
+        onClick={NextChangeHandler}
+        src="/images/writebar.png"
+        alt="write"
+      ></S.WriteImg>
+      <br />
+      <br />
+      <br />
     </S.Container>
   );
 }

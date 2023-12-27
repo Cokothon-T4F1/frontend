@@ -4,8 +4,11 @@ import ServiceExplain from "./Pages/ServiceExplain/ServiceExplain";
 import LoginPage from "./Pages/LoginPage/LoginPage";
 import GlobalStyle from "./GlobalStyles";
 import MainPage from "./Pages/MainPage/MainPage";
+
 import MainPostPage from "./Pages/Main/MainPostPage";
 import IanSinu from "./Pages/Ian/Ian";
+import MainSearch from "./Pages/MainSearch/MainSearch";
+
 
 function App() {
   return (
@@ -18,6 +21,8 @@ function App() {
           <Route path="/main" element={<MainPage />} />
           <Route path="/mainpost" element={<MainPostPage />} />
           <Route path="/ian" element={<IanSinu />} />
+             <Route path="/mainsearch" element={<MainSearch />} />
+
         </Routes>
       </BrowserRouter>
     </>
